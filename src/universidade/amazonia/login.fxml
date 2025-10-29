@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universidade.amazonia.AmazoniaController">
+   <children>
+      <AnchorPane prefHeight="661.0" prefWidth="538.0" style="-fx-background-color: #262626;">
+         <children>
+            
+            <ImageView fx:id="imgLogo" fitHeight="437.0" fitWidth="428.0" layoutX="55.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/logosemfundo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="539.0" prefHeight="661.0" prefWidth="538.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="160.0" layoutY="126.0" text="Acesse a sua conta">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="60.0" text="Bem vindo">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="342.0" text="Esqueceu sua senha?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="267.0" layoutY="478.0" text="Ou">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon glyphName="LOCK" layoutX="48.0" layoutY="316.0" size="20" text="" translateY="8.0" />
+            <FontAwesomeIcon glyphName="USER" layoutX="47.0" layoutY="242.0" size="20" translateY="8.0" />
+            <TextField fx:id="txtUser" layoutX="74.0" layoutY="232.0" prefHeight="25.0" prefWidth="367.0" promptText="Digite seu usuário ou email" />
+            <Button layoutX="175.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="68.0" prefWidth="202.0" style="-fx-background-color: #262626; -fx-background-radius: 25;" text="Logar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtPassword" layoutX="74.0" layoutY="305.0" prefHeight="25.0" prefWidth="367.0" promptText="Digite sua senha" />
+            <Button alignment="CENTER" layoutX="39.0" layoutY="529.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="219.0" style="-fx-background-color: #2688FF; -fx-background-radius: 20;" text="Continue com Facebook" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="292.0" layoutY="529.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #FE1A1A; -fx-background-radius: 20;" text="Continue com Gmail" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="74.0" layoutY="206.0" text="Usuário">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="282.0" text="Senha">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" glyphName="FACEBOOK" layoutX="63.0" layoutY="565.0" size="20" text="" />
+            <FontAwesomeIcon fill="WHITE" glyphName="GOOGLE" layoutX="319.0" layoutY="564.0" size="20" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

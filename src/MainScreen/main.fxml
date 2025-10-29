@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="main" prefHeight="827.0" prefWidth="1320.0" styleClass="main" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainScreen.MainController">
+
+   <children>
+      <!-- MENU LATERAL -->
+      <VBox fx:id="sidepanel" prefHeight="827.0" prefWidth="281.0" styleClass="sidepanel">
+         <children>
+            <AnchorPane prefHeight="827.0" prefWidth="281.0">
+               <children>
+                  <Pane fx:id="inner_pane" layoutX="17.0" layoutY="27.0" prefHeight="78.0" prefWidth="248.0" styleClass="inner_pane">
+                     <children>
+                        <Pane fx:id="inner_pane2" layoutX="193.0" prefHeight="78.0" prefWidth="48.0" styleClass="inner_pane2">
+                           <children>
+                              <ImageView fitHeight="52.0" fitWidth="57.0" layoutX="-2.0" layoutY="13.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagens/dots.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="78.0" fitWidth="90.0" layoutX="22.0" layoutY="2.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/laptop.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+
+                  <!-- Botões menu -->
+                  <Button fx:id="btn_home" layoutX="17.0" layoutY="141.0" onMouseClicked="#BtnHome" prefHeight="53.0" prefWidth="248.0" styleClass="btn_workbench11" text="Home" textFill="WHITE" />
+                  <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="55.0" layoutY="152.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/home.png" />
+                     </image>
+                  </ImageView>
+
+                  <Button fx:id="gerenciar_alunos" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="219.0" onMouseClicked="#BtnAlunos" prefHeight="53.0" prefWidth="248.0" styleClass="btn_workbench11" text="Gerenciar Alunos" textAlignment="CENTER" textFill="WHITE" />
+                  <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="57.0" layoutY="230.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/estudante.png" />
+                     </image>
+                  </ImageView>
+
+                  <Button fx:id="btn_cursos" layoutX="17.0" layoutY="297.0" onMouseClicked="#BtnCursos" prefHeight="53.0" prefWidth="248.0" styleClass="btn_workbench11" text="Gerenciar Cursos" textFill="WHITE" />
+                  <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="55.0" layoutY="308.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/cursos.png" />
+                     </image>
+                  </ImageView>
+
+                  <Button fx:id="btn_notas" layoutX="17.0" layoutY="377.0" onMouseClicked="#BtnNotas" prefHeight="53.0" prefWidth="248.0" styleClass="btn_workbench11" text="Gerenciar Notas" textFill="WHITE" />
+                  <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="55.0" layoutY="388.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/notas.png" />
+                     </image>
+                  </ImageView>
+
+                  <Button fx:id="btn_sair" layoutX="15.0" layoutY="448.0" onAction="#sairAplicacao" prefHeight="53.0" prefWidth="248.0" styleClass="btn_workbench11" text="Sair" textFill="WHITE" />
+                  <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="57.0" layoutY="459.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/sair.png" />
+                     </image>
+                  </ImageView>
+
+                  <ImageView fitHeight="271.0" fitWidth="236.0" layoutX="20.0" layoutY="531.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/graduacao.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+
+      <!-- PÁGINAS PRINCIPAIS -->
+      <StackPane fx:id="content_area" prefHeight="827.0" prefWidth="1039.0">
+
+         <!-- HOME -->
+         <Pane fx:id="home_page" prefHeight="827.0" prefWidth="1039.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2b2b40);">
+            <children>
+               <Pane fx:id="top_bar" prefHeight="86.0" prefWidth="1039.0">
+                  <children>
+                     <TextField layoutX="709.0" layoutY="27.0" prefHeight="32.0" prefWidth="225.0" promptText="Pesquisar" style="-fx-background-radius: 20;" />
+                     <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="656.0" layoutY="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../imagens/procurar.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="86.0" fitWidth="71.0" layoutX="954.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../imagens/user.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </Pane>
+               <Label layoutX="50.0" layoutY="120.0" text="Bem-vindos à Universidade Amazônia" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="34.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="462.0" fitWidth="674.0" layoutX="228.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../imagens/logosemfundo.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+
+         <!-- ALUNOS -->
+         <Pane fx:id="alunos_page" prefHeight="827.0" prefWidth="1039.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2b2b40);" visible="false">
+            <children>
+               <TableView fx:id="tabelaAlunos" layoutX="41.0" layoutY="42.0" prefHeight="485.0" prefWidth="988.0" style="-fx-background-color: rgba(255,255,255,0.05); -fx-background-radius: 15;">
+                  <columns>
+                     <TableColumn fx:id="colunaId" prefWidth="123.0" text="Id" />
+                     <TableColumn fx:id="colunaNome" prefWidth="151.0" text="Nome" />
+                     <TableColumn fx:id="colunaCurso" minWidth="9.0" prefWidth="166.0" text="Curso" />
+                     <TableColumn fx:id="colunaStatus" prefWidth="180.0" text="Status" />
+                     <TableColumn fx:id="colunaNp1" prefWidth="175.0" text="NP1" />
+                     <TableColumn fx:id="colunaNp2" prefWidth="190.0" text="NP2" />
+                  </columns>
+               </TableView>
+
+               <Label layoutX="52.0" layoutY="591.0" text="Nome" textFill="WHITE" />
+               <TextField fx:id="campoNome" layoutX="100.0" layoutY="589.0" prefWidth="213.0" />
+               <Label layoutX="52.0" layoutY="630.0" text="NP1" textFill="WHITE" />
+               <TextField fx:id="campoNp1" layoutX="100.0" layoutY="628.0" prefWidth="213.0" />
+               <Label layoutX="52.0" layoutY="670.0" text="NP2" textFill="WHITE" />
+               <TextField fx:id="campoNp2" layoutX="100.0" layoutY="668.0" prefWidth="213.0" />
+               <Label layoutX="346.0" layoutY="591.0" text="Curso" textFill="WHITE" />
+               <ComboBox fx:id="campoCurso" layoutX="420.0" layoutY="589.0" prefWidth="213.0" />
+               <Label layoutX="344.0" layoutY="632.0" text="Status" textFill="WHITE" />
+               <ComboBox fx:id="campoStatus" layoutX="420.0" layoutY="628.0" prefWidth="213.0" />
+               <Button layoutX="407.0" layoutY="677.0" onMouseClicked="#adicionarAluno" prefHeight="32.0" prefWidth="101.0" styleClass="BotaoAdicionar" stylesheets="@estilo.css" text="Adicionar" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font></Button>
+               <Button layoutX="527.0" layoutY="677.0" onMouseClicked="#removerAluno" prefHeight="32.0" prefWidth="101.0" styleClass="pane_111" stylesheets="@estilo.css" text="Remover" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font></Button>
+               <Button layoutX="655.0" layoutY="676.0" onAction="#limparCampos" prefHeight="32.0" prefWidth="112.0" styleClass="pane_1111" text="Limpar" textFill="WHITE">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Button>
+            </children>
+         </Pane>
+
+         <!-- CURSOS -->
+         <Pane fx:id="cursos_page" prefHeight="827.0" prefWidth="1039.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2b2b40);" visible="false">
+            <children>
+               <TableView fx:id="cursoTable" layoutX="32.0" layoutY="23.0" prefHeight="462.0" prefWidth="988.0" style="-fx-background-color: rgba(255,255,255,0.05); -fx-background-radius: 15;">
+                  <columns>
+                     <TableColumn fx:id="coluna_nome_curso" prefWidth="325.0" text="Nome" />
+                     <TableColumn fx:id="coluna_nivel_curso" prefWidth="339.0" text="Nível" />
+                     <TableColumn fx:id="coluna_ano_curso" prefWidth="323.0" text="Ano" />
+                  </columns>
+               </TableView>
+
+               <Label layoutX="58.0" layoutY="530.0" text="Nome" textFill="WHITE" />
+               <TextField fx:id="campo_nome_curso" layoutX="126.0" layoutY="527.0" prefWidth="213.0" />
+               <Label layoutX="391.0" layoutY="530.0" text="Nível" textFill="WHITE" />
+               <ComboBox fx:id="campo_nivel_curso" layoutX="460.0" layoutY="527.0" prefWidth="225.0" />
+               <Label layoutX="729.0" layoutY="530.0" text="Ano" textFill="WHITE" />
+               <TextField fx:id="campo_ano_curso" layoutX="797.0" layoutY="527.0" prefWidth="213.0" />
+
+               <Button layoutX="152.0" layoutY="600.0" onMouseClicked="#adicionarCurso" prefHeight="43.0" prefWidth="120.0" styleClass="BotaoAdicionar" text="Adicionar Curso" textFill="WHITE">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Button>
+               <Button layoutX="298.0" layoutY="600.0" onMouseClicked="#removerCurso" prefHeight="43.0" prefWidth="120.0" styleClass="pane_111" text="Remover Curso" textFill="WHITE">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Button>
+               <Button layoutX="444.0" layoutY="600.0" onAction="#limparCursos" prefHeight="43.0" prefWidth="120.0" styleClass="pane_1111" text="Limpar" textFill="#fffefe">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Button>
+            </children>
+         </Pane>
+
+         <!-- NOTAS -->
+<Pane fx:id="notas_page" prefHeight="827.0" prefWidth="1039.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2b2b40);" visible="false">
+    <children>
+
+        <!-- Cabeçalho -->
+        <Label layoutX="50.0" layoutY="30.0" text="Gerenciamento de Notas" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="26.0" />
+            </font>
+        </Label>
+
+        <HBox layoutX="50.0" layoutY="90.0" spacing="20.0">
+            <children>
+                <Label text="Selecionar Aluno:" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="cbAlunos" prefHeight="36.0" prefWidth="332.0" style="-fx-background-radius: 8; -fx-font-size: 14px;" />
+                <Button fx:id="btnCalcular" prefHeight="36.0" prefWidth="180.0" styleClass="btn_workbench11" text="Calcular Média" textFill="WHITE" />
+            </children>
+        </HBox>
+
+        <!-- Informações do aluno -->
+        <VBox layoutX="70.0" layoutY="180.0" spacing="12.0" style="-fx-background-color: rgba(255,255,255,0.08); -fx-padding: 20; -fx-background-radius: 12;">
+            <children>
+                <HBox spacing="10.0">
+                    <Label text="ID:" textFill="WHITE" />
+                    <Label fx:id="lblId" text="-" textFill="#00C8FF" />
+                </HBox>
+                <HBox spacing="10.0">
+                    <Label text="Nome:" textFill="WHITE" />
+                    <Label fx:id="lblNome" text="-" textFill="#00C8FF" />
+                </HBox>
+                <HBox spacing="10.0">
+                    <Label text="Curso:" textFill="WHITE" />
+                    <Label fx:id="lblCurso" text="-" textFill="#00C8FF" />
+                </HBox>
+            </children>
+        </VBox>
+
+        <!-- Indicador de progresso (média) -->
+        <StackPane layoutX="440.0" layoutY="200.0" prefHeight="240.0" prefWidth="240.0" style="-fx-background-color: rgba(255,255,255,0.05); -fx-background-radius: 20;">
+            <children>
+                <ProgressIndicator fx:id="progressIndicator" prefHeight="220.0" prefWidth="220.0" progress="0.0" style="-fx-accent: red; -fx-control-inner-background: transparent;" />
+                <Label fx:id="lblMedia" style="-fx-font-size: 48px; -fx-font-weight: bold;" text="0.0">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font></Label>
+                <Label layoutY="180.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" textFill="WHITE" />
+            </children>
+        </StackPane>
+
+        <!-- Painel de desempenho -->
+        <Pane layoutX="750.0" layoutY="190.0" prefHeight="270.0" prefWidth="240.0" style="-fx-background-color: rgba(255,255,255,0.08); -fx-background-radius: 20; -fx-border-color: rgba(255,255,255,0.15); -fx-border-radius: 20;">
+            <children>
+                <Label layoutX="35.0" layoutY="25.0" text="Resumo de Desempenho" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="35.0" layoutY="80.0" text="Status:" textFill="WHITE" />
+                <Label fx:id="lblStatusResumo" layoutX="140.0" layoutY="80.0" text="-" textFill="#00C8FF" />
+
+                <Label layoutX="35.0" layoutY="120.0" text="Situação:" textFill="WHITE" />
+                <Label fx:id="lblSituacaoResumo" layoutX="140.0" layoutY="120.0" text="-" textFill="#00C8FF" />
+
+                <Label layoutX="35.0" layoutY="160.0" text="Exame Necessário:" textFill="WHITE" />
+                <Label fx:id="lblExameResumo" layoutX="190.0" layoutY="160.0" text="-" textFill="#00C8FF" />
+
+                <Separator layoutX="25.0" layoutY="210.0" prefWidth="190.0" />
+
+                <Label fx:id="lblUltimaAtualizacao" layoutX="35.0" layoutY="230.0" style="-fx-font-size: 12px;" text="Última Atualização:  -" textFill="WHITE" />
+            </children>
+        </Pane>
+
+        <!-- Painel estatístico extra -->
+        <Pane layoutX="70.0" layoutY="521.0" prefHeight="250.0" prefWidth="920.0" style="-fx-background-color: rgba(255,255,255,0.05); -fx-background-radius: 15;">
+            <children>
+                <Label layoutX="30.0" layoutY="20.0" text="Análise de Turma" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="60.0" layoutY="80.0" text="Média da Turma:" textFill="WHITE" />
+                <Label fx:id="lblMediaTurma" layoutX="200.0" layoutY="80.0" text="-" textFill="#00C8FF" />
+
+                <Label layoutX="60.0" layoutY="120.0" text="Maior Nota:" textFill="WHITE" />
+                <Label fx:id="lblMaiorNota" layoutX="200.0" layoutY="120.0" text="-" textFill="#00C8FF" />
+
+                <Label layoutX="60.0" layoutY="160.0" text="Menor Nota:" textFill="WHITE" />
+                <Label fx:id="lblMenorNota" layoutX="200.0" layoutY="160.0" text="-" textFill="#00C8FF" />
+
+                <Label layoutX="60.0" layoutY="200.0" text="Alunos Aprovados:" textFill="WHITE" />
+                <Label fx:id="lblAprovados" layoutX="230.0" layoutY="200.0" text="-" textFill="#00C8FF" />
+      
+              <!-- Logo decorativa -->
+              <ImageView fitHeight="270.0" fitWidth="324.0" layoutX="596.0" layoutY="-15.0" opacity="0.59" preserveRatio="true">
+                  <image>
+                      <Image url="@../imagens/logosemfundo.png" />
+                  </image>
+              </ImageView>
+            </children>
+        </Pane>
+
+    </children>
+</Pane>
+
+
+      </StackPane>
+   </children>
+</HBox>
